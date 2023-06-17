@@ -1,10 +1,4 @@
-//
-//  main.cpp
-//  DS2_week5_mission5_extansionzSort
-//
-//  Created by Joshua Yang on 2019/6/3.
-//  Copyright Â© 2019 Joshua Yang. All rights reserved.
-//
+
 
 #include <iostream>
 #include <stdio.h>
@@ -571,10 +565,10 @@ int main(int argc, const char * argv[]) {
 	SecondaryStorage SList = *new SecondaryStorage() ;
 	string num;
     bool check = false ;
-		cout << "**********Åwªï¨Ï¥Î**********\n";
-		//cout << "½Ð¿é¤JÀÉ®×¸¹½X:\n";
-		//cout << "* 0 : Â÷¶} \n* 1 : External Sort\n* 2 : Primary Index\n 3:\n* ****************************\n";
-		//cout << "¿é¤J: " ;
+		cout << "**********æ­¡è¿Žä½¿ç”¨**********\n";
+		//cout << "è«‹è¼¸å…¥æª”æ¡ˆè™Ÿç¢¼:\n";
+		//cout << "* 0 : é›¢é–‹ \n* 1 : External Sort\n* 2 : Primary Index\n 3:\n* ****************************\n";
+		//cout << "è¼¸å…¥: " ;
 		mission1() ;
 		//cin >> num ;
 		//mission2( SList );
@@ -586,7 +580,7 @@ int main(int argc, const char * argv[]) {
 		
 		else if ( num == "2" ) {
 			
-			if ( check == false ) cout << "½Ð¥ý°õ¦æ¥ô°È1\n" ;
+			if ( check == false ) cout << "è«‹å…ˆåŸ·è¡Œä»»å‹™1\n" ;
 			else
 			
 			mission2( SList ) ;	
@@ -595,19 +589,19 @@ int main(int argc, const char * argv[]) {
 		
 		else if ( num == "3" ) {
 			
-			if ( check == false ) cout << "½Ð¥ý°õ¦æ¥ô°È1\n" ;
+			if ( check == false ) cout << "è«‹å…ˆåŸ·è¡Œä»»å‹™1\n" ;
 			else mission3(adjList) ;
 					
 		} // else if
         
 		else if ( num != "0" ){
-			cout << "¿é¤J¿ù»~!\n";
+			cout << "è¼¸å…¥éŒ¯èª¤!\n";
 		} // else if
 		 
 		*/ 
 	//} // while
 	
-	cout << "ÁÂÁÂ¨Ï¥Î!\n";
+	cout << "è¬è¬ä½¿ç”¨!\n";
 	return 0 ;	
 }
 
