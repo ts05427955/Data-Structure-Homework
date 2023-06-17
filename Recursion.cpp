@@ -1,4 +1,4 @@
-// 10627173 °¨«T¤¸ ¸ê¤u¤G¥Ò 10627135 ³¯®Ë¥Í ¸ê¤u¤G¥Ò
+// 
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
@@ -159,8 +159,8 @@ void MissionThree() {
 } // MissionThree()
 
 int main(){
-  cout << "Welcome!\n" << "Input 1 for ±Æ¦C\n" << "Input 2 for «ü©w¼Æ¦rªº±Æ¦C \n" ;
-  cout << "Input 3 for «ü©wªø«×ªº±Æ¦C\n" << "Input 0 for Exit\n" ;
+  cout << "Welcome!\n" << "Input 1 for æŽ’åˆ—\n" << "Input 2 for æŒ‡å®šæ•¸å­—çš„æŽ’åˆ— \n" ;
+  cout << "Input 3 for æŒ‡å®šé•·åº¦çš„æŽ’åˆ—\n" << "Input 0 for Exit\n" ;
   cout << "Input mission number:" ;
   string missionNumber = " " ;
   cin >> missionNumber ;
@@ -179,8 +179,8 @@ int main(){
       cout << "Error,please try again!!\n" ;
     } // else
 
-    cout << "Input 1 for ±Æ¦C\n" << "Input 2 for «ü©w¼Æ¦rªº±Æ¦C \n" ;
-    cout << "Input 3 for «ü©wªø«×ªº±Æ¦C\n" << "Input 0 for Exit\n" ;
+    cout << "Input 1 for æŽ’åˆ—\n" << "Input 2 for æŒ‡å®šæ•¸å­—çš„æŽ’åˆ— \n" ;
+    cout << "Input 3 for æŒ‡å®šé•·åº¦çš„æŽ’åˆ—\n" << "Input 0 for Exit\n" ;
     cout << "Input mission number:" ;
     cin >> missionNumber ;
   } // while
