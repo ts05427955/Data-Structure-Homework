@@ -1,4 +1,4 @@
-// DSex2_10627173 °¨«T¤¸_10627135_³¯®Ë¥Í 
+
 #include <stdio.h>
 #include <string>
 #include <iostream>
@@ -9,7 +9,7 @@
 #include <sstream>
 #include <string.h>
 
-//½Ğ¿é¤JÀÉ®×½s¸¹ 
+//è«‹è¼¸å…¥æª”æ¡ˆç·¨è™Ÿ 
 
 using namespace std;
 
@@ -23,7 +23,7 @@ class Work {
 	
 	public:
 		vector <TheFile> inputFile;
-		string inpNum ;  // ¨Ï¥ÎªÌ¿é¤Jªº¦W¤l
+		string inpNum ;  // ä½¿ç”¨è€…è¼¸å…¥çš„åå­
 		string tital1 = "";
 		string tital2 = "";
 	
@@ -31,24 +31,24 @@ class Work {
 		fstream file ;  
 		TheFile stay;
 		vector <TheFile> get;
-		vector <string> file1Text ;  // ¤@¦æ¤@¦æÀx°_§@³Æ¥÷ 
-		string fileName; // ÀÉ®×¦WºÙ 
+		vector <string> file1Text ;  // ä¸€è¡Œä¸€è¡Œå„²èµ·ä½œå‚™ä»½ 
+		string fileName; // æª”æ¡ˆåç¨± 
 		string input ;
-	  	string line; // ¦æ¸ê®Æ 
+	  	string line; // è¡Œè³‡æ–™ 
 	  	string ch;
 	  	int i = 0, j = 0 ;
 	  	inputFile.clear();
 	  	while ( input != "0" ) {
 	  		file1Text.clear() ; 
 	  		i = 0 ;
-  			cout << "½Ğ¿é¤JÀÉ®×¸¹½X 501,502... [0]¬°Â÷¶} : " ;
+  			cout << "è«‹è¼¸å…¥æª”æ¡ˆè™Ÿç¢¼ 501,502... [0]ç‚ºé›¢é–‹ : " ;
   			cin >> input ;
   			fileName = "input" + input + ".txt" ;
   			inpNum = input;
   			file.open( fileName.c_str(), ios::in ) ;
   			if ( !file ) {
  	 	  		if ( input != "0" ) {
-	  	  			cout << fileName + "¤£¦s¦b\n" ;
+	  	  			cout << fileName + "ä¸å­˜åœ¨\n" ;
 	  	    	} // if
 	      	} //if
 			else {
@@ -272,24 +272,24 @@ void MergeSort( vector <TheFile> &sorting, int front, int end ){
 			int r = right + 1;
 		 
 			while (1) {
-				while ( l < right && sortingQ[++l].graduateNum > sort.graduateNum );//¦V¥k§ä¤j©ósortªº¼Æ­Èªº¦ì¸m
-				while ( r > 0 && sortingQ[--r].graduateNum < sort.graduateNum );//¦V¥ª§ä¤p©ósortªº¼Æ­Èªº¦ì¸m
+				while ( l < right && sortingQ[++l].graduateNum > sort.graduateNum );//å‘å³æ‰¾å¤§æ–¼sortçš„æ•¸å€¼çš„ä½ç½®
+				while ( r > 0 && sortingQ[--r].graduateNum < sort.graduateNum );//å‘å·¦æ‰¾å°æ–¼sortçš„æ•¸å€¼çš„ä½ç½®
 
-				if ( l >= r ) {//½d³ò¤ºsort¥kÃä¨S¦³¤ñsort¤pªº¼Æ,¤Ï¤§¥çµM
+				if ( l >= r ) {//ç¯„åœå…§sortå³é‚Šæ²’æœ‰æ¯”sortå°çš„æ•¸,åä¹‹äº¦ç„¶
 					break;
 				} // if
 		
-				stay = sortingQ[l]; //¤ñpivot¤jªº¼Æ²¾¨ì¥kÃä¡A¤ñpivot¤pªº¼Æ´«¨ì¥ªÃä
+				stay = sortingQ[l]; //æ¯”pivotå¤§çš„æ•¸ç§»åˆ°å³é‚Šï¼Œæ¯”pivotå°çš„æ•¸æ›åˆ°å·¦é‚Š
 				sortingQ[l] = sortingQ[r] ;
 				sortingQ[r] = stay;
 			} // while
 
-			stay = sortingQ[left];//±Npivot²¾¨ì¤¤¶¡
+			stay = sortingQ[left];//å°‡pivotç§»åˆ°ä¸­é–“
 			sortingQ[left] = sortingQ[r] ;
 			sortingQ[r] = stay;
 
-			quickSort( sortingQ, left, r - 1);//¥ª¤l¼Æ¦C°µ»¼°j
-			quickSort( sortingQ, r + 1, right);//¥k¤l¼Æ¦C°µ»¼°j
+			quickSort( sortingQ, left, r - 1);//å·¦å­æ•¸åˆ—åšéè¿´
+			quickSort( sortingQ, r + 1, right);//å³å­æ•¸åˆ—åšéè¿´
 		}
 	
 	} // quickSort
@@ -326,7 +326,7 @@ void MergeSort( vector <TheFile> &sorting, int front, int end ){
 				order[lsd]++; 
 			} // for 
         
-			// ­«·s±Æ¦C
+			// é‡æ–°æ’åˆ—
 			int k = num;
 			for(i = 0; i < num ; i++) { 
 				if(order[i] != 0)  {
@@ -452,11 +452,11 @@ void MergeSort( vector <TheFile> &sorting, int front, int end ){
 int main() {
 	string num;
 	Work work; 
-	cout << "**********Åwªï¨Ï¥Î**********\n";
+	cout << "**********æ­¡è¿ä½¿ç”¨**********\n";
 	while ( num != "0" ) {
-		cout << "½Ğ¿é¤J¥ô°È½s¸¹0-3\n";
-		cout << "* 0 : Â÷¶} \n* 1 : ¿ï¾Ü±Æ§Ç vs. ®ğªw±Æ§Ç\n* 2 : ¦X¨Ö±Æ§Ç vs.§Ö³t±Æ§Ç\n* 3 : °ò¼Æ±Æ§Ç\n******************\n";
-		cout << "¿é¤J: " ;
+		cout << "è«‹è¼¸å…¥ä»»å‹™ç·¨è™Ÿ0-3\n";
+		cout << "* 0 : é›¢é–‹ \n* 1 : é¸æ“‡æ’åº vs. æ°£æ³¡æ’åº\n* 2 : åˆä½µæ’åº vs.å¿«é€Ÿæ’åº\n* 3 : åŸºæ•¸æ’åº\n******************\n";
+		cout << "è¼¸å…¥: " ;
 		cin >> num;
 		if ( num == "1" ) {
 			work.mission1();
@@ -468,11 +468,11 @@ int main() {
 			work.mission3();
 		} // if
 		else if ( num != "0" ){
-			cout << "¿é¤J¿ù»~!\n";
+			cout << "è¼¸å…¥éŒ¯èª¤!\n";
 		} // else
 	} // while
 	
-	cout << "ÁÂÁÂ¨Ï¥Î!\n";
+	cout << "è¬è¬ä½¿ç”¨!\n";
 	
 	return 0;
 } // main
