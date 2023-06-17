@@ -1,0 +1,22 @@
+(Task 1) Sort and Save to New File 
+
+(Insertion sort will be used as a control group for Task 1. Generate three different original data files that meet the requirements and ensure that the execution time measurements are all non-zero.
+Submission: Describe in detail the experimental process of generating data, and list the obtained measurement data. Refer to the following format. Comment on whether the data is reasonable.
+
+
+(Task 2) Single Queue Simulation
+Goal: During the simulation, create a "Done List" that includes successfully served orders without exceeding the time limit.
+Done List: Three fields include "Order ID", "Delay", and "Departure". Delay represents the idle time of the chef from when the order is retrieved from the queue, calculated as the idle time minus the order placement time. Departure is calculated as the order placement time plus the delay and production time.
+Submission: Provide the complete content of the "Done List" for the specified test data files provided by the instructor. Refer to the following format.
+
+(Task 3) Double Queue Simulation
+
+(Task 4) Multiple Queue Simulation
+
+Input: Same as Task 3, with an additional positive integer input MM to specify the number of queues.
+Procedure: Simulate the multi-queue scheduling with MM chefs using SQF strategy, and the rest of the procedure is the same as Task 3.
+Output: Same as Task 3, but modify the file name format as more401.txt, more402.txt, etc.
+
+
+
+
