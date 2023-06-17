@@ -1,0 +1,36 @@
+(Task 1) Selection Sort vs. Bubble Sort 
+Goal: Implement an improved version of Bubble Sort, which terminates early if no swaps are made. Generate at least three different test data files to ensure that the measured sorting time is non-zero. Measure each data file and sorting method 10 times and calculate the average sorting time.
+Submission: Describe the characteristics of the test data files in detail and provide the resulting data. Refer to the following format. Observe the data to infer why one method performs better than the others. If the data is disordered and cannot be observed, or if the inference does not match the method's characteristics, the question is considered unsuccessful.
+Selection Sort
+Bubble Sort
+Improved Bubble Sort
+Test Data File 1
+
+Test Data File 2
+
+Test Data File 3
+
+
+(Task 2) Merge Sort vs. Quick Sort
+
+Goal: Implement an improved version of Quick Sort that doesn't use the first element as the pivot. Generate at least three different test data files to ensure that the measured sorting time is non-zero. Measure each data file and sorting method 10 times and calculate the average sorting time.
+Submission: Describe the characteristics of the test data files in detail and provide the resulting data. Refer to the following format. Observe the data to infer why one method performs better than the others. If the data is disordered and cannot be observed, or if the inference does not match the method's characteristics, the question is considered unsuccessful.
+Merge Sort
+Quick Sort
+Improved Quick Sort
+Test Data File 1
+
+Test Data File 2
+
+Test Data File 3
+
+
+(Task 3) Radix Sort
+
+
+(Task 4) Comparison of Five Sorting Algorithms
+...
+Input: Same as Task 1.
+Procedure: Execute the five sorting algorithms for the three tasks one by one, but do not save the sorting results to new files. Store the input file numbers and the measured sorting times for the five algorithms in a data file (fixed file name: sort_time.txt).
+Output: Data file containing the input file numbers and the five sorting times.
+(Refer to the following format.) Repeat the execution of the tasks and append the result data in append mode to the end of the file.
