@@ -1,0 +1,21 @@
+(Task 1) File Reading and Writing
+Input: The complete name or number of the data file, such as input201.txt or 201.
+Procedure: After reading the file, calculate the number of data records. Then, omit the first three lines containing headers and column names, and starting from the fourth line, write each record to a new backup file, separated by a tab symbol ('\t').
+Output: Display the number of data records on the screen, and generate a new file that is the same as the original file but with the first three lines removed, named copy201.txt.
+
+
+(Task 2) File Filtering 
+Filtering fields: Number of students, Number of graduates in the previous academic year.
+Input: The complete name or number of the backup file, such as copy201.txt or 201, and the respective minimum thresholds for each filtering field (>=).
+Procedure: When reading the file, only select the data that meets both minimum thresholds. Recalculate the number of data records and overwrite the original backup file, still separated by a tab symbol ('\t').
+Output: Display the number of filtered data records on the screen and update the backup file with reduced records.
+
+
+(Task 3) Merge Files
+Input: The complete names or numbers of two backup files.
+Procedure: Read the contents of both files. Using the first file as the reference, merge the data from the second file record by record. The records with the same school name (followed by department name) should be placed together. After recalculating the number of data records, write the results to a new output file.
+Output: Display the number of merged data records on the screen and generate a new file named output201_202.txt.
+
+
+
+
