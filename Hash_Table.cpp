@@ -1,4 +1,4 @@
-//DSex2_10627124_·¨¬ù«í_10627173_°¨«T¤¸
+
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
@@ -594,10 +594,10 @@ int main( int argc, const char * argv[] ) {
 	//hi.readBinary(fileName) ;
 	string num;
 	while ( num != "0" ) {
-		cout << "**********Åwªï¨Ï¥Î**********\n";
-		cout << "½Ð¿é¤J¥ô°È½s¸¹0-2\n";
-		cout << "* 0 : Â÷¶} \n* 1 : Linear probing\n* 2 : Double Hash\n* 3 : Quadratic probing\n ****************************\n";
-		cout << "¿é¤J: " ;
+		cout << "**********èˆ§îŽã„ãƒŽ**********\n";
+		cout << "å«å—î—°ãƒ´å­çµªè…¹0-2\n";
+		cout << "* 0 : çž’ç§¨ \n* 1 : Linear probing\n* 2 : Double Hash\n* 3 : Quadratic probing\n ****************************\n";
+		cout << "å—î—°: " ;
 		cin >> num;
 		if ( num == "1" ) {
 			buildHash() ;
@@ -611,11 +611,11 @@ int main( int argc, const char * argv[] ) {
 		} // else if
         
 		else if ( num != "0" ){
-			cout << "¿é¤J¿ù»~!\n";
+			cout << "å—î—°å²¿ç²‡!\n";
 		} // else if
 	} // while
 	
-	cout << "ÁÂÁÂ¨Ï¥Î!\n";
+	cout << "è°…è°…ã„ãƒŽ!\n";
 	
 	
 	return 0;
