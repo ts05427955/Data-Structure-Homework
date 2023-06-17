@@ -1,4 +1,4 @@
-// DSex6_10627173 °¨«T¤¸_10627135_³¯®Ë¥Í 
+
 #include <stdio.h>
 #include <string>
 #include <iostream>
@@ -227,17 +227,17 @@ class BinaryTree {
 		bool hasOne = false;
 		bool read = false ;
 		int num = 1;
-		string inpNum ;  // ¨Ï¥ÎªÌ¿é¤Jªº¦W¤l
+		string inpNum ;  // ä½¿ç”¨è€…è¼¸å…¥çš„åå­
 		struct node *root = NULL; 
 		
 	void GetFile() {
 		fstream file ;  
 		File stay;
 		vector <File> get;
-		vector <string> file1Text ;  // ¤@¦æ¤@¦æÀx°_§@³Æ¥÷ 
-		string fileName; // ÀÉ®×¦WºÙ 
+		vector <string> file1Text ;  // ä¸€è¡Œä¸€è¡Œå„²èµ·ä½œå‚™ä»½ 
+		string fileName; // æª”æ¡ˆåç¨± 
 		string input ;
-	  	string line; // ¦æ¸ê®Æ 
+	  	string line; // è¡Œè³‡æ–™ 
 	  	string origin;
 	  	string ch;
 	  	int i = 0, j = 0, stayhp;
@@ -249,14 +249,14 @@ class BinaryTree {
 	  	while ( input != "0" ) {
 	  		file1Text.clear() ; 
 	  		i = 0 ;
-  			cout << "½Ğ¿é¤JÀÉ®×¸¹½X 601,602... [0]¬°Â÷¶} : " ;
+  			cout << "è«‹è¼¸å…¥æª”æ¡ˆè™Ÿç¢¼ 601,602... [0]ç‚ºé›¢é–‹ : " ;
   			cin >> input ;
   			fileName = "input" + input + ".txt" ;
   			inpNum = input;
   			file.open( fileName.c_str(), ios::in ) ;
   			if ( !file ) {
  	 	  		if ( input != "0" ) {
-	  	  			cout << fileName + "¤£¦s¦b\n" ;
+	  	  			cout << fileName + "ä¸å­˜åœ¨\n" ;
 	  	    	} // if
 	      	} //if
 			else {
@@ -358,7 +358,7 @@ class BinaryTree {
 	
 	void mission2() {
 		if ( !hasOne ) {
-			cout << "½Ğ¥ı¶i¦æ¥ô°È1!\n" ;
+			cout << "è«‹å…ˆé€²è¡Œä»»å‹™1!\n" ;
 		} // if
 		else {
 			searchpoint.clear() ;
@@ -367,14 +367,14 @@ class BinaryTree {
 			int top = 0 ;
 			int min = 0 ;
 			int count = 0 ;
-			cout << "½Ğ¿é¤J³Ì§CªùÂe­È:" ;
+			cout << "è«‹è¼¸å…¥æœ€ä½é–€æª»å€¼:" ;
 			cin >> number ;
 			bool check = false ;
 			int len = number.length() ;
 			while ( check != true ) {
 				for( int j = 0; j < len ; j++ ){
             		if( !isdigit( number[j] ) ) {
-                  		cout << "¿ù»~!!\n" << "½Ğ¿é¤J³Ì§CªùÂe­È:" ;
+                  		cout << "éŒ¯èª¤!!\n" << "è«‹è¼¸å…¥æœ€ä½é–€æª»å€¼:" ;
 						cin >> number ;
 						len = number.length() ;
 						j = 0 ;
@@ -391,7 +391,7 @@ class BinaryTree {
 			count = Print( root, min, top, 0 ) ;
 			
 			reverse( searchpoint.begin(), searchpoint.end() ) ;
-			cout << "¨«¹Lªº¸ô" << count << "\n" ;
+			cout << "èµ°éçš„è·¯" << count << "\n" ;
 			cout << "\t" << inputFile[0].num << "\t" << inputFile[0].name << "\t" << inputFile[0].type << "\t" 
 			<< inputFile[0].total << "\t" << inputFile[0].hp << "\t" << inputFile[0].attack << "\t" << inputFile[0].defense << "\n" ;
 			int all = searchpoint.size() ;
@@ -407,7 +407,7 @@ class BinaryTree {
 	
 	void mission3() {
 		if ( !hasOne ) {
-			cout << "½Ğ¥ı¶i¦æ¥ô°È1!\n" ;
+			cout << "è«‹å…ˆé€²è¡Œä»»å‹™1!\n" ;
 		} // if
 		else {
 			int Max = findMax(root); 
@@ -421,11 +421,11 @@ class BinaryTree {
 int main() {
 	string num;
 	BinaryTree tree; 
-	cout << "**********Åwªï¨Ï¥Î**********\n";
+	cout << "**********æ­¡è¿ä½¿ç”¨**********\n";
 	while ( num != "0" ) {
-		cout << "½Ğ¿é¤J¥ô°È½s¸¹0-3\n";
-		cout << "* 0 : Â÷¶} \n* 1 : «Ø¥ß¤G¤¸·j¯Á¾ğ\n* 2 : ³æ¤@Äæ¦ì·j´M(½Ğ¥ı¶i¦æ¹L¥ô°È1«á¦A°õ¦æ)\n* 3 : §R°£³æ¤@Äæ¦ì(½Ğ¥ı¶i¦æ¹L¥ô°È1¦A°õ¦æ)\n******************\n";
-		cout << "¿é¤J: " ;
+		cout << "è«‹è¼¸å…¥ä»»å‹™ç·¨è™Ÿ0-3\n";
+		cout << "* 0 : é›¢é–‹ \n* 1 : å»ºç«‹äºŒå…ƒæœç´¢æ¨¹\n* 2 : å–®ä¸€æ¬„ä½æœå°‹(è«‹å…ˆé€²è¡Œéä»»å‹™1å¾Œå†åŸ·è¡Œ)\n* 3 : åˆªé™¤å–®ä¸€æ¬„ä½(è«‹å…ˆé€²è¡Œéä»»å‹™1å†åŸ·è¡Œ)\n******************\n";
+		cout << "è¼¸å…¥: " ;
 		cin >> num;
 		if ( num == "1" ) {
 			tree.mission1();
@@ -437,11 +437,11 @@ int main() {
 			tree.mission3();
 		} // if
 		else if ( num != "0" ){
-			cout << "¿é¤J¿ù»~!\n";
+			cout << "è¼¸å…¥éŒ¯èª¤!\n";
 		} // else
 	} // while
 	
-	cout << "ÁÂÁÂ¨Ï¥Î!\n";
+	cout << "è¬è¬ä½¿ç”¨!\n";
 	
 	
 	return 0;
