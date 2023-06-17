@@ -1,0 +1,28 @@
+(Task 1)
+Create Binary Search Trees
+Goal:
+(1) In addition to the original "Health" binary search tree, create a version 2 binary search tree by repeating the same steps, with a modification in Rule 3. When encountering data with the same key value, always add it to the right subtree. Record the heights of both trees.
+(2) Read the data in ascending order by "ID" and create the two binary search trees mentioned above, using "Attack" as the key value. Record the heights of the trees.
+(3) Read the data in ascending order by "ID" and create the two binary search trees mentioned above, using "Defense" as the key value. Record the heights of the trees.
+Submission: For each specified data file, list the six heights mentioned above. Use the following reference format. Provide a textual description of an observable significant trend and its causes. The response will be considered unsuccessful if any part of the description contradicts the principles of the methods.
+
+
+(Task 2) Single Field Search // Exempt for individual groups, eligible for points only after completing other tasks.
+Definition: Calculate the average of the maximum and minimum values of "Health." Values below the average are considered low thresholds, while values above the average are considered high thresholds. Similarly, calculate the average of the maximum and minimum values of "Attack" and "Defense" to define their respective low and high thresholds.
+Goal:
+(1) Define five different low threshold values for the "Health" binary search tree and calculate the average number of visited nodes for five traversals. Calculate the average number of visited nodes for the five different high thresholds as well. Record the average number of visited nodes for these two thresholds.
+(2) Repeat the same experiment for "Attack" and "Defense," separately recording the average number of visited nodes for the two thresholds.
+Submission: For each specified data file, list the six average numbers of visited nodes. Use the following reference format, including two decimal places. Provide a textual description of the impact of low and high thresholds on the number of visited nodes and compare and discuss the differences between different search trees. The response will be considered unsuccessful if any part of the description contradicts the principles of the methods.
+
+
+input60
+4 ##
+
+(Task 3) Delete Single Data
+
+(Task 4) Rebuilding Balanced Trees
+Input: Execute Task 1 multiple times and gradually create skewed binary search trees.
+Procedure:
+(1) Apply any algorithm to rebuild the current binary search tree into a balanced binary search tree, with the minimum height possible for the given data size. For example, the minimum height for 8-15 data records is 4.
+(2) Display the node contents on the screen, showing each node from top to bottom and from left to right, layer by layer. Include two fields: "Health" and "ID" (one or multiple).
+Output: Display on the screen, from top to bottom, the two fields of each node, along with a hierarchical index on the left side to check balance.
