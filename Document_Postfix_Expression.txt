@@ -1,0 +1,21 @@
+(Task 1) Valid Expression Detection 
+Input: A string allowing white spaces.
+Procedure: Check if the string is a valid infix expression, including the allowed alphanumeric characters, paired parentheses, and infix notation. Stop the detection upon finding an error.
+Output: Display the result of the detection on the screen. If an error is found, it must explicitly indicate the type of error, such as: "Invalid character: (", "Missing or extra parentheses", "Not an infix expression".
+
+
+(Task 2) Convert Infix Expression to Postfix Expression
+Input: A string determined to be an infix expression from Task 1.
+Procedure: Define a custom data structure for a stack and use it to convert the input string to a postfix expression. Store the postfix expression in a linked list, with each operand and operator recorded as a node.
+Output: Display the postfix expression on the screen from left to right, separating each operand and operator with a comma.
+
+
+(Task 3) Solve Postfix Expression
+Input: A postfix expression stored as a linked list from Task 2.
+Procedure: Use a custom data structure for a stack to evaluate the postfix expression.
+Output: Display the computed answer on the screen. If a division by zero situation occurs, output an error message.
+
+
+
+
+
