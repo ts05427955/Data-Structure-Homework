@@ -1,0 +1,17 @@
+(Task 1) Generate permutations using recursion.
+Input: A positive integer N.
+Procedure: Generate all possible permutations of distinct numbers from 1 to N, sequentially numbering them as [1], [2], [3], ..., and calculate the maximum recursion depth.
+Output: Display the generated permutations on the screen in order, and show the maximum recursion depth at the end.
+
+
+(Task 2) Generate permutations of specified numbers using recursion 
+Input: M distinct positive integers, where M is between 2 and 9.
+Procedure: Generate all possible permutations using these M distinct numbers, sequentially numbering them as [1], [2], [3], ..., and measure the execution time.
+Output: Display the generated permutations on the screen in order, and show the execution time at the end.
+
+
+(Task 3) Generate permutations of specified length using recursion.
+Input: A positive integer M not exceeding 9.
+Procedure: Select M distinct numbers from 1, 2, ..., 9 to generate all possible permutations, sequentially numbering them as [1], [2], [3], ..., and measure the execution time.
+Output: Display the generated permutations on the screen in order, and show the execution time at the end.
+Challenge: This task will be performed during the exam, and students are required to modify the original program on-site and upload the code within the deadline.
