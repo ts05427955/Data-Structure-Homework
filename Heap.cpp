@@ -1,4 +1,3 @@
-//DSex1_10627124_·¨¬ù«í_10627173_°¨«T¤¸
 
 #include <iostream>
 #include <stdio.h>
@@ -272,10 +271,10 @@ int main(int argc, const char * argv[]) {
 	string num;
 	double final ;
 	while ( num != "0" ) {
-		cout << "**********Åwªï¨Ï¥Î**********\n";
-		cout << "½Ğ¿é¤J¥ô°È½s¸¹0-3\n";
-		cout << "* 0 : Â÷¶} \n* 1 : «Ø¥ß³Ì¤j°ï¿n\n* 2 : «Ø¥ßÂù°ï¿n\n 3: Min-Max Heap\n****************************\n";
-		cout << "¿é¤J: " ;
+		cout << "**********æ­¡è¿ä½¿ç”¨**********\n";
+		cout << "è«‹è¼¸å…¥ä»»å‹™ç·¨è™Ÿ0-3\n";
+		cout << "* 0 : é›¢é–‹ \n* 1 : å»ºç«‹æœ€å¤§å †ç©\n* 2 : å»ºç«‹é›™å †ç©\n 3: Min-Max Heap\n****************************\n";
+		cout << "è¼¸å…¥: " ;
 		cin >> num;
 		if ( num == "1" ) {
 			for ( int i = 0; i <= 10 ; i++ ) {
@@ -303,11 +302,11 @@ int main(int argc, const char * argv[]) {
 			mission3();	
 		} 
 		else if ( num != "0" ){
-			cout << "¿é¤J¿ù»~!\n";
+			cout << "è¼¸å…¥éŒ¯èª¤!\n";
 		} // else if
 	} // while
 	
-	cout << "ÁÂÁÂ¨Ï¥Î!\n";
+	cout << "è¬è¬ä½¿ç”¨!\n";
 	
 	
 	return 0;
@@ -428,13 +427,13 @@ void mission2() {
  	clock_t start, end ;
 	while( input != "0" ) {
 		cout << "****************************\n" ;
-  		cout << "½Ğ¿é¤JÀÉ®×¸¹½X 101,102... [0]¬°Â÷¶} : " ;
+  		cout << "è«‹è¼¸å…¥æª”æ¡ˆè™Ÿç¢¼ 101,102... [0]ç‚ºé›¢é–‹ : " ;
   		cin >> input ;			
   		fileName = "input" + input + ".txt" ;
   		file.open( fileName.c_str(), ios::in ) ;
   		if ( !file ) {
   			if ( input != "0" ) {
-	  	  		cout << fileName + "¤£¦s¦b\n" ;
+	  	  		cout << fileName + "ä¸å­˜åœ¨\n" ;
 	  	  		return ;
 			} // if	
 		} // if
@@ -445,7 +444,7 @@ void mission2() {
 				getline( file, buffer ) ;
 				
 				i++ ;
-				if ( i > 3 ) {      // ÀY¤T¦æ¤£­n 
+				if ( i > 3 ) {      // é ­ä¸‰è¡Œä¸è¦ 
 					stringstream ss( buffer ) ; //	
 					dataNum = 0 ;
 					while(getline(ss, token, '\t' )) {
@@ -517,7 +516,7 @@ void mission2() {
 						//cout << index << "   " << inputList[index].studentNum << "\n" ;	
 					} // while
 					
-					if ( index == 0 ) {    // ³]vector[0] ¬° 0  ***deap¯S©Ê*** 
+					if ( index == 0 ) {    // è¨­vector[0] ç‚º 0  ***deapç‰¹æ€§*** 
 						temp.index = 0 ;
 						temp.studentNum = 0 ;
 						deap.insert( temp ) ; 
@@ -525,13 +524,13 @@ void mission2() {
 					
 					index ++ ; 
 					if ( inputList.size() >= index ) {
-						temp.index = index ;   // µ¹¨C§â¸ê®Æ½s¸¹ 
+						temp.index = index ;   // çµ¦æ¯æŠŠè³‡æ–™ç·¨è™Ÿ 
 						temp.studentNum = inputList[index-1].studentNum ; 
 						deap.insert( temp ) ; 						
 						//cout << "[" << index << "]" << deap.dataList[index].index << "   " << deap.dataList[index].studentNum << "\n" ;
 					} // if
 					/*
-					temp.index = index ;   // µ¹¨C§â¸ê®Æ½s¸¹ 
+					temp.index = index ;   // çµ¦æ¯æŠŠè³‡æ–™ç·¨è™Ÿ 
 					temp.studentNum = inputList[index-1].studentNum ; 
 					deap.insert( temp ) ; 
 					
@@ -544,7 +543,7 @@ void mission2() {
 							// Min-heap 
 							//cout << deap.dataList.size() << "\n" ;
 							/*
-							if ( ( deap.dataList.size() - 1 ) < ( index + opposite ) ) {  // check¦³¨S¦³¦s¦b¬Û¹ï¸`ÂI 
+							if ( ( deap.dataList.size() - 1 ) < ( index + opposite ) ) {  // checkæœ‰æ²’æœ‰å­˜åœ¨ç›¸å°ç¯€é» 
 								if ( deap.dataList[index].studentNum <= deap.dataList[index+opposite].studentNum ) {
 									if ( deap.dataList[index].studentNum < deap.dataList[(index-2)/2].studentNum ) {
 										deap.min_legalCheck(index) ;
