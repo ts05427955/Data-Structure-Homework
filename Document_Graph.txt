@@ -1,0 +1,3 @@
+Task 1: The user enters a file number, and after confirming the existence of the file, the program reads the file. The data read from the file is sequentially inserted into a linked list. If the sender or recipient is not already in the main list, they are added to the list. After inserting all the data, the sender names are sorted, followed by sorting the recipient names. Finally, the results are output to a text file.
+
+Task 2: Using the previously created linked list, the program starts from different student IDs as starting points and traverses the entire graph using breadth-first search. It calculates the relationship between senders and recipients and counts the number of such relationships.
