@@ -1,4 +1,4 @@
-// DSex4_10627173 10627135
+
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -37,17 +37,17 @@ class Dsex4 {
 		clock_t startSort = 0 , endSort = 0 ;
 		clock_t startWrite = 0 , endWrite = 0;
 		
-		Structure temp ; // §@©ñªF¦è¶ivector¤§¥Î 
+		Structure temp ; // ä½œæ”¾æ±è¥¿é€²vectorä¹‹ç”¨ 
 		Structure newStrForm ;
 		Staff newVecForm ;
-	    string line ;             // Åª¨ú¤@¦æ¼È¦sªº¦a¤è 
-	    string headline ;       // ©ñ¼ĞÃD¥Î 
-	    fstream file ;         // ©w¸qÀÉ®×ªº«Å§i
-	    string fileName ;      // ÀÉ®×¦W¤l 
-	    string input ;  // ¨Ï¥ÎªÌ¿é¤Jªº¦W¤l
+	    string line ;             // è®€å–ä¸€è¡Œæš«å­˜çš„åœ°æ–¹ 
+	    string headline ;       // æ”¾æ¨™é¡Œç”¨ 
+	    fstream file ;         // å®šç¾©æª”æ¡ˆçš„å®£å‘Š
+	    string fileName ;      // æª”æ¡ˆåå­ 
+	    string input ;  // ä½¿ç”¨è€…è¼¸å…¥çš„åå­
 	    string fileNum ;
 	    
-	    vector<Staff> chef ;   //¥D­nQueue
+	    vector<Staff> chef ;   //ä¸»è¦Queue
 	    
 	    vector<Structure> Order ;
 	    vector<Structure> AbortList ;
@@ -56,7 +56,7 @@ class Dsex4 {
 	    vector<Structure> TempList ; 
 	    
 	    
-	    Staff tempStaff ;      // ³z¹L¥L¥h©ñ¸ê®Æ¨ìStaff¤¤
+	    Staff tempStaff ;      // é€éä»–å»æ”¾è³‡æ–™åˆ°Staffä¸­
 
         void insertSort( vector<Structure> Temp ) {
         	int length = Temp.size() ;
@@ -65,7 +65,7 @@ class Dsex4 {
 		
 	    void Queue( vector<Staff> member, int totalchefNum ) {
 	    	int i = 0, u = 0 , orderNum = Order.size() ;
-	    	int chefNum = 0, curOrdNum = 0 ; //²{®É­q³æ*¸¹¼Æ* 
+	    	int chefNum = 0, curOrdNum = 0 ; //ç¾æ™‚è¨‚å–®*è™Ÿæ•¸* 
 	    	int abortListNum = 0, timeOutListNum = 0 , doneListNum = 0 ;
 	    	
 	    	bool check = false ;
@@ -85,10 +85,10 @@ class Dsex4 {
 	    	//TimeOutList[timeOutListNum] = newStrForm ;
 			//DoneList[doneListNum] = newStrForm ;	 
 			
-			TempList = Order ;       //¨úOrder§@Fustion¤¤ªº­q³æ   	
+			TempList = Order ;       //å–Orderä½œFustionä¸­çš„è¨‚å–®   	
 	    	member.push_back( tempStaff ) ;
 			while ( !TempList.empty() ) {
-			    //³B²zmember¤¤ªº¦î¦C 
+			    //è™•ç†memberä¸­çš„ä½‡åˆ— 
 			    while ( chefNum < totalchefNum ) {
 					if ( TempList[curOrdNum].arrivals >= member[chefNum].timeNow ) { 
 						//cout << "TempList oID : " << TempList[curOrdNum].oID << "\n" ;
@@ -174,14 +174,14 @@ class Dsex4 {
 				if ( check == true ) {
 					//cout << "check" << "\n" ;
 					if ( totalchefNum == 1 ) {
-						if ( member[chefNum].data.size() < 3 ) {    //¨S¦³¶W¸ü 
+						if ( member[chefNum].data.size() < 3 ) {    //æ²’æœ‰è¶…è¼‰ 
 							temp = TempList[curOrdNum] ;
 						 	//cout << temp.oID << "\n" ;
 							member[chefNum].data.push_back( temp ) ;
 							memberSize = member[chefNum].data.size() ;
  							//cout << "Member[chefNum1].oID : " << member[chefNum].data[memberSize-1].oID << "\n";
 						} //// if 
-						else { //¶W¸ü
+						else { //è¶…è¼‰
 							AbortList.push_back( newStrForm );		
 							AbortList[abortListNum] = TempList[curOrdNum];	
 							AbortList[abortListNum].delay = 0 ;
@@ -386,14 +386,14 @@ class Dsex4 {
 			Order.clear() ; 
 			tempStaff.data.clear() ;
 			string tempNum ; 
-			string input ;  // ¨Ï¥ÎªÌ¿é¤Jªº¦W¤l
+			string input ;  // ä½¿ç”¨è€…è¼¸å…¥çš„åå­
 			int stateCheck = 0 ;
   			int i = 0,u = 0 ;
   			int num = 0 ;
   			int time = 0 ;
-  			int count = 0 ;     // §@­pºâ¦æ¼Æ
+  			int count = 0 ;     // ä½œè¨ˆç®—è¡Œæ•¸
   			char letter = ' ' ;
-  			cout << "½Ğ¿é¤JÀÉ®×¸¹½X 401,402... [0]¬°Â÷¶} : " ;
+  			cout << "è«‹è¼¸å…¥æª”æ¡ˆè™Ÿç¢¼ 401,402... [0]ç‚ºé›¢é–‹ : " ;
   	 		cin >> input ;
   			if ( input != "0" ) {
   	  			count = 0 ;
@@ -402,7 +402,7 @@ class Dsex4 {
   	  			file.open( fileName.c_str(), ios::in ) ;
   	  			if ( !file ) {
   	  				if ( input != "0" ) {
-  	  	  				cout << fileName + "¤£¦s¦b\n" ;
+  	  	  				cout << fileName + "ä¸å­˜åœ¨\n" ;
   	   				 } // if
       			} //if
       			else {
@@ -580,8 +580,8 @@ class Dsex4 {
 	    	newVecForm.timeNow = 0 ;
 	    	newVecForm.data.push_back( newStrForm ) ;
 	    	
-	    	tempStaff = newVecForm ;  // tempStaff«YStaff 
-	    	temp = newStrForm ;	 // temp«YStructure 
+	    	tempStaff = newVecForm ;  // tempStaffä¿‚Staff 
+	    	temp = newStrForm ;	 // tempä¿‚Structure 
 	    	
 	    	
 			temp = TempList[tempListNum] ; 
@@ -597,21 +597,21 @@ class Dsex4 {
 
 int main() {
 	
-	Structure order ; // Åª¤JÀÉ®×©ñ¸mªº¦a¤è
-	string num ;             // ¨Ï¥ÎªÌ¿é¤J 
+	Structure order ; // è®€å…¥æª”æ¡ˆæ”¾ç½®çš„åœ°æ–¹
+	string num ;             // ä½¿ç”¨è€…è¼¸å…¥ 
   	Dsex4 ex4 ;
-  	cout << "*****Åwªï¨Ï¥Î*****\n" ; 
-  	while ( num != "0" ) {  // Åª¤J»P¨¾§b 
-    	cout << "½Ğ¿é¤J¥ô°È¸¹½X0-3\n" ;
-    	cout << "* 0 : Â÷¶} \n* 1 : ±Æ§Ç«á¥t¦s·sÀÉ \n* 2 : ³æ¤@¦î¦C¼ÒÀÀ \n* 3 : Âù­«¦î¦C¼ÒÀÀ \n******************\n" ; 
-  		cout << "¿é¤J: " ;
+  	cout << "*****æ­¡è¿ä½¿ç”¨*****\n" ; 
+  	while ( num != "0" ) {  // è®€å…¥èˆ‡é˜²å‘† 
+    	cout << "è«‹è¼¸å…¥ä»»å‹™è™Ÿç¢¼0-3\n" ;
+    	cout << "* 0 : é›¢é–‹ \n* 1 : æ’åºå¾Œå¦å­˜æ–°æª” \n* 2 : å–®ä¸€ä½‡åˆ—æ¨¡æ“¬ \n* 3 : é›™é‡ä½‡åˆ—æ¨¡æ“¬ \n******************\n" ; 
+  		cout << "è¼¸å…¥: " ;
   		cin >> num ;
   		if ( num.size() == 1 ) {
-  	  		while ( num < "0" || num > "3" ) {   //¨¾§b
-  	    		cout << "¿ù»~\n" ;
-        		cout << "½Ğ¿é¤J¥ô°È¸¹½X0-3\n" ;
-        		cout << "* 0 : Â÷¶} \n* 1 : ±Æ§Ç«á¥t¦s·sÀÉ \n* 2 : ³æ¤@¦î¦C¼ÒÀÀ \n* 3 : Âù­«¦î¦C¼ÒÀÀ \n******************\n" ; 
-  	    		cout << "¿é¤J: " ;
+  	  		while ( num < "0" || num > "3" ) {   //é˜²å‘†
+  	    		cout << "éŒ¯èª¤\n" ;
+        		cout << "è«‹è¼¸å…¥ä»»å‹™è™Ÿç¢¼0-3\n" ;
+        		cout << "* 0 : é›¢é–‹ \n* 1 : æ’åºå¾Œå¦å­˜æ–°æª” \n* 2 : å–®ä¸€ä½‡åˆ—æ¨¡æ“¬ \n* 3 : é›™é‡ä½‡åˆ—æ¨¡æ“¬ \n******************\n" ; 
+  	    		cout << "è¼¸å…¥: " ;
 	    		cin >> num ;
 	  		} // while
     
@@ -626,11 +626,11 @@ int main() {
 	  		} // else if
    	 	} // if
     	else {
-  	  		cout << "¿ù»~\n" ;
+  	  		cout << "éŒ¯èª¤\n" ;
 		} // else 
   	} // while 
   
-  	cout << "ÁÂÁÂ¨Ï¥Î" ;
+  	cout << "è¬è¬ä½¿ç”¨" ;
 	
 	 
 
