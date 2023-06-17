@@ -1,4 +1,4 @@
-// DSex2_10627173 °¨«T¤¸_10627135_³¯®Ë¥Í 
+
 #include <stdio.h>
 #include <string>
 #include <iostream>
@@ -6,17 +6,17 @@
 #include <vector> 
 #include <stdlib.h>
 #include <sstream>
-//½Ğ¿é¤JÀÉ®×¸¹½X ex:201,202 
-//mission 3 ¨â­ÓÀÉ®×¿é¤J¬Ò¬°0«h°h¥X 
+//è«‹è¼¸å…¥æª”æ¡ˆè™Ÿç¢¼ ex:201,202 
+//mission 3 å…©å€‹æª”æ¡ˆè¼¸å…¥çš†ç‚º0å‰‡é€€å‡º 
 using namespace std ; 
 class Dsex2 {
   public:
-  	// vector <string> file1Text ;  // ¤@¦æ¤@¦æÀx°_§@³Æ¥÷ 
-  	// vector <string> file2Text ; // ¤@¦æ¤@¦æÀx°_§@³Æ¥÷ 
-  	// vector <string> save ;     // ¼È¦s 
-    string line ;             // Åª¨ú¤@¦æ¼È¦sªº¦a¤è 
-    fstream file ;            // ©w¸qÀÉ®×ªº«Å§i
-    string fileName ;      // ÀÉ®×¦W¤l 
+  	// vector <string> file1Text ;  // ä¸€è¡Œä¸€è¡Œå„²èµ·ä½œå‚™ä»½ 
+  	// vector <string> file2Text ; // ä¸€è¡Œä¸€è¡Œå„²èµ·ä½œå‚™ä»½ 
+  	// vector <string> save ;     // æš«å­˜ 
+    string line ;             // è®€å–ä¸€è¡Œæš«å­˜çš„åœ°æ–¹ 
+    fstream file ;            // å®šç¾©æª”æ¡ˆçš„å®£å‘Š
+    string fileName ;      // æª”æ¡ˆåå­ 
   public : class Case {
   	public :
   	string fileText ;
@@ -26,21 +26,21 @@ class Dsex2 {
   }; 
   	
   public:void Mission1() {
-  	vector <string> file1Text ;  // ¤@¦æ¤@¦æÀx°_§@³Æ¥÷ 
-  	string input ;  // ¨Ï¥ÎªÌ¿é¤Jªº¦W¤l
+  	vector <string> file1Text ;  // ä¸€è¡Œä¸€è¡Œå„²èµ·ä½œå‚™ä»½ 
+  	string input ;  // ä½¿ç”¨è€…è¼¸å…¥çš„åå­
   	int i = 0 ;
-  	int count = 0 ;     // §@­pºâ¦æ¼Æ
+  	int count = 0 ;     // ä½œè¨ˆç®—è¡Œæ•¸
   	while ( input != "0" ) {
   	  file1Text.clear() ; 
   	  count = 0 ;
   	  i = 0 ;
-  	  cout << "½Ğ¿é¤JÀÉ®×¸¹½X 201,202... [0]¬°Â÷¶} : " ;
+  	  cout << "è«‹è¼¸å…¥æª”æ¡ˆè™Ÿç¢¼ 201,202... [0]ç‚ºé›¢é–‹ : " ;
   	  cin >> input ;
   	  fileName = "input" + input + ".txt" ;
   	  file.open( fileName.c_str(), ios::in ) ;
   	  if ( !file ) {
   	  	if ( input != "0" ) {
-  	  	  cout << fileName + "¤£¦s¦b\n" ;
+  	  	  cout << fileName + "ä¸å­˜åœ¨\n" ;
   	    } // if
       } //if
       else {
@@ -93,8 +93,8 @@ class Dsex2 {
   } // Mission1()
 
   public:void Mission2() {
-    vector <string> file2Text ; // ¤@¦æ¤@¦æÀx°_§@³Æ¥÷ 
-    vector <string> save ;     // ¼È¦s 
+    vector <string> file2Text ; // ä¸€è¡Œä¸€è¡Œå„²èµ·ä½œå‚™ä»½ 
+    vector <string> save ;     // æš«å­˜ 
   	stringstream cc ;
 	string input ;
 	string inputNum ; 
@@ -117,24 +117,24 @@ class Dsex2 {
   	  targetStudent = 0 ;
   	  targetGraduate = 0 ;
   	  num = 0 ;
-  	  cout << "\n½Ğ¿é¤JÀÉ®×¸¹½X 201,202... [0]¬°Â÷¶} : " ;
+  	  cout << "\nè«‹è¼¸å…¥æª”æ¡ˆè™Ÿç¢¼ 201,202... [0]ç‚ºé›¢é–‹ : " ;
   	  cin >> input ;
   	  fileName = "copy" + input + ".txt" ;
   	  file.open( fileName.c_str(), ios::in ) ;
   	  if ( !file ) {
   	  	if ( input != "0" ) {
-  	  	  cout << fileName + "¤£¦s¦b\n" ; 
+  	  	  cout << fileName + "ä¸å­˜åœ¨\n" ; 
   	    } // if
       } //if
       else {
       	while ( check != true ) {
-      	  cout << "½Ğ¿é¤J¾Ç¥Í¼Æ³Ì§CªùÂe(0-9999) : " ;
+      	  cout << "è«‹è¼¸å…¥å­¸ç”Ÿæ•¸æœ€ä½é–€æª»(0-9999) : " ;
       	  cin >> inputNum ; 
 		  if ( inputNum >= "0" || inputNum <= "9" ) {
 
 		  	student = atoi( inputNum.c_str() )  ;
 		  	if ( student < 0 || student > 9999 ) {
-		  	  cout << "¿ù»~\n" ;	
+		  	  cout << "éŒ¯èª¤\n" ;	
 			} // if 
 			else {
 			  check = true ;
@@ -145,14 +145,14 @@ class Dsex2 {
 	    check = false ;
 	    
       	while ( check != true ) {
-		  cout << "½Ğ¿é¤J¤W¾Ç¦~«×²¦·~¥Í¼Æ³Ì§CªùÂe(0-9999) : " ;
+		  cout << "è«‹è¼¸å…¥ä¸Šå­¸å¹´åº¦ç•¢æ¥­ç”Ÿæ•¸æœ€ä½é–€æª»(0-9999) : " ;
 		  cin >> inputNum ;
 		  if ( inputNum >= "0" || inputNum <= "9" ) {  
 
 		  	graduate = atoi( inputNum.c_str() )  ;
 
 		  	if ( graduate < 0 || graduate > 9999 ) {
-		  	  cout << "¿ù»~\n" ;	
+		  	  cout << "éŒ¯èª¤\n" ;	
 		  	} // if
 		  	else {
 		  	  check = true ;	
@@ -240,13 +240,13 @@ class Dsex2 {
   	  fileCover.clear() ;
   	  count = 0 ;
   	  i = 0 ;
-  	  cout << "½Ğ¿é¤J¥DÀÉ®×¸¹½X 201,202... [0]¬°Â÷¶} : " ;
+  	  cout << "è«‹è¼¸å…¥ä¸»æª”æ¡ˆè™Ÿç¢¼ 201,202... [0]ç‚ºé›¢é–‹ : " ;
   	  cin >> input1 ;
   	  file1Name = "copy" + input1 + ".txt" ;
   	  file.open( file1Name.c_str(), ios::in ) ;
   	  if ( !file ) {
   	  	if ( input1 != "0" ) {
-  	  	  cout << file1Name + "¤£¦s¦b\n" ;
+  	  	  cout << file1Name + "ä¸å­˜åœ¨\n" ;
   	    } // if
       } //if
       else {
@@ -255,13 +255,13 @@ class Dsex2 {
 	  
       file.close() ;
       
-      cout << "½Ğ¿é¤J°ÆÀÉ®×¸¹½X 201,202... [0]¬°Â÷¶} : " ;
+      cout << "è«‹è¼¸å…¥å‰¯æª”æ¡ˆè™Ÿç¢¼ 201,202... [0]ç‚ºé›¢é–‹ : " ;
   	  cin >> input2 ;
   	  file2Name = "copy" + input2 + ".txt" ;
   	  file.open( file2Name.c_str(), ios::in ) ;
   	  if ( !file ) {
    	  	if ( input2 != "0" ) {
-  	  	  cout << file2Name + "¤£¦s¦b\n" ;
+  	  	  cout << file2Name + "ä¸å­˜åœ¨\n" ;
 	    } // if
 	  } // if
       else {
@@ -384,20 +384,20 @@ class Dsex2 {
 
 
 int main() {
-  string num ;             // ¨Ï¥ÎªÌ¿é¤J 
+  string num ;             // ä½¿ç”¨è€…è¼¸å…¥ 
   Dsex2 ex2 ;
-  cout << "*****Åwªï¨Ï¥Î*****\n" ; 
-  while ( num != "0" ) {  // Åª¤J»P¨¾§b 
-    cout << "½Ğ¿é¤J¥ô°È¸¹½X0-3\n" ;
-    cout << "* 0 : Â÷¶} \n* 1 : ÅªÀÉ©M¼gÀÉ \n* 2 : ¿z¿ïÀÉ®× \n* 3 : ¦X¨ÖÀÉ®× \n******************\n" ; 
-  	cout << "¿é¤J: " ;
+  cout << "*****æ­¡è¿ä½¿ç”¨*****\n" ; 
+  while ( num != "0" ) {  // è®€å…¥èˆ‡é˜²å‘† 
+    cout << "è«‹è¼¸å…¥ä»»å‹™è™Ÿç¢¼0-3\n" ;
+    cout << "* 0 : é›¢é–‹ \n* 1 : è®€æª”å’Œå¯«æª” \n* 2 : ç¯©é¸æª”æ¡ˆ \n* 3 : åˆä½µæª”æ¡ˆ \n******************\n" ; 
+  	cout << "è¼¸å…¥: " ;
   	cin >> num ;
   	if ( num.size() == 1 ) {
-  	  while ( num < "0" || num > "3" ) {   //¨¾§b
-  	    cout << "¿ù»~\n" ;
-        cout << "½Ğ¿é¤J¥ô°È¸¹½X0-3\n" ;
-        cout << "* 0 : Â÷¶} \n* 1 : ÅªÀÉ©M¼gÀÉ \n* 2 : ¿z¿ïÀÉ®× \n* 3 : ¦X¨ÖÀÉ®× \n******************\n" ; 
-  	    cout << "¿é¤J: " ;
+  	  while ( num < "0" || num > "3" ) {   //é˜²å‘†
+  	    cout << "éŒ¯èª¤\n" ;
+        cout << "è«‹è¼¸å…¥ä»»å‹™è™Ÿç¢¼0-3\n" ;
+        cout << "* 0 : é›¢é–‹ \n* 1 : è®€æª”å’Œå¯«æª” \n* 2 : ç¯©é¸æª”æ¡ˆ \n* 3 : åˆä½µæª”æ¡ˆ \n******************\n" ; 
+  	    cout << "è¼¸å…¥: " ;
 	    cin >> num ;
 	  } // while
     
@@ -414,11 +414,11 @@ int main() {
 	  } // else if
     } // if
     else {
-  	  cout << "¿ù»~\n" ;
+  	  cout << "éŒ¯èª¤\n" ;
 	} // else 
   } // while 
   
-  cout << "ÁÂÁÂ¨Ï¥Î" ;
+  cout << "è¬è¬ä½¿ç”¨" ;
 
 
 } // main() 
