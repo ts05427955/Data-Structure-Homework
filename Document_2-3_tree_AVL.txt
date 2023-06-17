@@ -1,0 +1,19 @@
+Summary:
+Task 1: Use a 2-3 tree to store data, comparing it based on school names. Add the data to the tree and finally print the root and the height of the tree.
+Difficulties encountered: Difficulty in handling node splitting in the 2-3 tree, especially when a node has four children. Unable to complete the implementation.
+Solution: Still working on it.
+
+Task 2: Use an AVL tree to store data. After reading the file, insert the data into the tree using a binary tree approach. After insertion, use the node height and key to determine which rotation to perform. Once all data is inserted, print the root and the height of the tree.
+Difficulties encountered: No major difficulties encountered in this task, except for some complexity in determining the appropriate rotations.
+
+Question and Answer: When comparing a 2-3 tree and an AVL tree, under what circumstances would they be considered fair?
+The height of a 2-3 tree containing nodes with n elements is not greater than [log2(n+1)] (which is the minimum height of a binary tree with n nodes).
+In a 2-3 tree, a node with two children is called a 2-node, while a node with three children is called a 3-node. In an AVL tree, all nodes are 2-nodes.
+Comparison:
+2-3 Tree AVL Tree
+Number of nodes is 2^h - 1. Balance factor of a node is the height of its left subtree minus the height of its right subtree (sometimes the opposite).
+Experimental data:
+input: 205 1186
+input: 204 980
+input: 203 190
+Method: Calculate the ratio of balanced visited nodes to the total number of balanced nodes to determine fairness.
