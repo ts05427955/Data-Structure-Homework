@@ -1,0 +1,13 @@
+Task 1, Task 2
+Summary:
+First, read the file into a vector used to store all the data. While reading, assign sequential numbers. After reading, pass one data entry at a time into the heap in the order they were read. Once the heap receives data, it compares it with the parent node. If the current node is larger than the parent, they are swapped. After the swap, repeat the comparison process until the current node is smaller or the comparison is completed. Repeat these steps until all data is placed in the heap. Finally, find and print the required data. The root is located at heap[0], and the bottom is at heap[heap.size-1]. The bottom left extends from the root continuously to the bottom.
+
+Challenge: In Task 1, determining the ascending order in the Max Heap requires multiple tests.
+In Task 2, understanding the principles of Deap's structure takes time, such as finding relative nodes and deciding whether to swap. The solution is to systematically solve the problem using mathematical calculations.
+
+Question Answering:
+input101 input102 input105
+Task 1 0.5s 0.55s 0.555s
+Task 2 1.32s 1.4528s 1.466s
+
+Based on the data, Deap is slower than Max Heap because Deap requires more data comparison and swapping. However, Deap can provide both maximum and minimum values, while Max Heap can only provide the maximum value. If only the maximum value is needed, Max Heap is more suitable. But if both the maximum and minimum values are required, Deap is more suitable.
