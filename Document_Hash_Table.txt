@@ -1,0 +1,19 @@
+Task 1
+Summary:
+The Hash Table size is determined by multiplying the smallest prime number greater than the total number of data by 1.2. Each data entry is placed into the Hash Table by calculating the key as the character of the student ID multiplied by ASCII code modulo the Hash Table size. If a collision occurs, the key is incremented by 1. The main issue encountered was an error in the steps to read the binary file, resulting in incorrect construction of the Hash Table. However, overall, the problem was not significant.
+
+Task 2:
+After processing and reading the file, the data is passed one by one to the "insert" function, which calculates the hash value using a hash function. If the corresponding index already has data, the step value is added repeatedly until an empty space is found. After storing the data, the insertion process is repeated until all data is stored. The average search value is calculated, and the hash table is output to a file.
+
+The only difficulty encountered was forgetting to reset the index to the beginning of the table when it exceeds the table's size. This mistake caused the program to become unstable, making it challenging to identify the issue.
+
+Input: input304, input307, input308
+
+Task 1 average execution time: 0.0000001351351351 sec, 0.0000001169811321 sec, 0.000000116838488 sec
+
+Task 2 average execution time: 0.0000001148648649 sec, 0.0000001094339623 sec, 0.0000001030927835 sec
+
+Task 1 average comparison count: 6.06757, 11.7736, 3.74914
+Task 2 average comparison count: 3.16892, 3.12453, 3.08591
+
+It can be observed that there is a certain relationship between execution time and the average comparison count. However, from the results, it is noticed that although the average comparison count is twice as different, the execution time does not differ twice as much. Therefore, it is inferred that the average comparison count does affect the execution time, but the impact is not significant compared to other factors.
